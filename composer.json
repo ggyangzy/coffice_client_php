@@ -1,0 +1,14 @@
+{
+    "name": "yzyblog/coffice_client_php",
+    "type": "library",
+    "require": {
+        "dekuan/vdata": "^1.0"
+    },
+    "license": "1.0.0",
+    "authors": [
+        {
+            "name": "yangzy",
+            "email": "ggyangzy@163.com"
+        }
+    ]
+}
