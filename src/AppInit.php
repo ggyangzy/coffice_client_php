@@ -1,8 +1,6 @@
 <?php
 namespace yzyblog\coffice_client_php;
 
-use dekuan\vdata\CVData;
-
 Class AppInit
 {
     public static function appInit(  & $arrRtn, & $sDesc, $dbs = '')
@@ -17,19 +15,6 @@ Class AppInit
             'arrData'   =>  Client::getDefaultInit(),
         ];
 
-        $nRtn = Query::request( $arrRequest, $arrData, $sDesc );
-
-        if( 0 == $nRtn )
-        {
-            $arrRtn = json_decode( $arrData, true );
-
-            if( CVData::GetInstance()->IsValidVData( $arrRtn ) )
-            {
-                $arrRtn = $arrRtn['vdata'];
-            }
-
-        }
-
-        return $nRtn;
+        return Query::request( $arrRequest, $arrRtn, $sDesc );
     }
 }

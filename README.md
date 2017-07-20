@@ -2,6 +2,7 @@
 install
 
     composer require yzyblog/coffice_client_php
+    composer -o dump-autoload
 update file :routes/web.php
 
 add content:
