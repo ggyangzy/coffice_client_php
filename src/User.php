@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Http\Coffice_sdk_php;
+namespace yzyblog\coffice_client_php;
 
 Class User
 {

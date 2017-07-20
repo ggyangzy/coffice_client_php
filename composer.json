@@ -10,5 +10,8 @@
             "name": "yangzy",
             "email": "ggyangzy@163.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {"yzyblog\\coffice_client_php\\": "src"}
+    }
 }
