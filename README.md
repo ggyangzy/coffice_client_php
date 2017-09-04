@@ -718,7 +718,7 @@ add content:
         }
     }
     
-create file: /Usersapp/Http/Models/Index/Index_V1_0.php
+create file: app/Http/Models/Index/Index_V1_0.php
 
 add content:
 
@@ -895,8 +895,8 @@ update file: .env
 
 add content:
 
-    ServiceDomain=XXX
-    APPID=XXX
-    APPKey=XXX
-    MasterKey=XXX
-    MasteToken=XXX
+    ServiceDomain=XXX # 服务端地址
+    APPID=XXX         # 服务端下发APPID
+    APPKey=XXX        # 服务端下发APPKEY
+    MasterKey=XXX     # 服务端下发MasterKey
+    MasteToken=XXX    # 与前端通信的Token 标识前端Master请求权限
