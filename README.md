@@ -262,6 +262,8 @@ add content:
     use App\Http\Controllers\Controller;
     use App\Http\Libs\Helper;
     use dekuan\vdata\CConst;
+    use dekuan\delib\CLib;
+    use App\Http\Models;
     use yzyblog\coffice_client_php\Client;
     
     class IndexController extends Controller
@@ -496,6 +498,7 @@ add content:
     use App\Http\Controllers\Controller;
     use App\Http\Libs\Helper;
     use dekuan\vdata\CConst;
+    use App\Http\Models;
     
     class UserController extends Controller
     {
