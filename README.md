@@ -468,7 +468,7 @@ add content:
         {
             parent::__construct();
 
-            if( env('MasterToken') == app('request')->input('masterToken') )
+            if( env('MasterToken') == app('request')->input('MasterToken') )
             {
                 Client::initMaster();
             }
