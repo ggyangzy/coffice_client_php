@@ -274,9 +274,9 @@ add content:
             parent::__construct();
             $arrInputData = app('request')->input();
             
-            if( CLib::IsArrayWithKeys( $arrInputData, ['MasteToken'] )
-                && CLib::IsExistingString( $arrInputData['MasteToken'] )
-                && env('MasteToken') == $arrInputData['MasteToken'] )
+            if( CLib::IsArrayWithKeys( $arrInputData, ['MasterToken'] )
+                && CLib::IsExistingString( $arrInputData['MasterToken'] )
+                && env('MasterToken') == $arrInputData['MasterToken'] )
             {
                 Client::initMaster();
             }
@@ -468,7 +468,7 @@ add content:
         {
             parent::__construct();
 
-            if( env('MasteToken') == app('request')->input('masterToken') )
+            if( env('MasterToken') == app('request')->input('masterToken') )
             {
                 Client::initMaster();
             }
@@ -902,4 +902,4 @@ add content:
     APPID=XXX         # 服务端下发APPID
     APPKey=XXX        # 服务端下发APPKEY
     MasterKey=XXX     # 服务端下发MasterKey
-    MasteToken=XXX    # 与前端通信的Token 标识前端Master请求权限
+    MasterToken=XXX    # 与前端通信的Token 标识前端Master请求权限
