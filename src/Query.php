@@ -162,7 +162,7 @@ Class Query
             {
                 if( CLib::IsExistingString( $arrRtn ) )
                 {
-                    $arrRtn = [ $arrRtn ];
+                    $arrRtn = [ 'result' => $arrRtn ];
                 }
             }
         }
