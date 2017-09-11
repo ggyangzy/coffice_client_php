@@ -911,4 +911,4 @@ add content:
     APPKey=XXX        # 服务端下发APPKEY
     MasterKey=XXX     # 服务端下发MasterKey
     MasterToken=XXX    # 与前端通信的Token 标识前端Master请求权限
-    ACCESS_DOMAIN=www.xxx.com,www.ccc.com
+    ACCESS_DOMAIN=www.xxx.com,www.ccc.com #允许的域名
