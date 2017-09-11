@@ -12,7 +12,15 @@ add content:
     // 跨域
     header( 'Access-Control-Allow-Methods: GET,PUT,POST,OPTIONS,DELETE' );
     header( 'Access-Control-Allow-Headers:Origin, X-Requested-With, Content-Type, Accept, content-type' );
-    header( 'Access-Control-Allow-Origin: *' );
+    //header( 'Access-Control-Allow-Credentials: true');  接收cookie
+
+    $arrDomain = explode( ',', env( 'ACCESS_DOMAIN', '' ));
+    $domain = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
+    if ( ! in_array( $domain, $arrDomain ) )
+    {
+        $domain = '';
+    }
+    header( 'Access-Control-Allow-Origin: '.$domain );
     
     
     $app->get('init',       'InitController\InitController@init');
@@ -903,3 +911,4 @@ add content:
     APPKey=XXX        # 服务端下发APPKEY
     MasterKey=XXX     # 服务端下发MasterKey
     MasterToken=XXX    # 与前端通信的Token 标识前端Master请求权限
+    ACCESS_DOMAIN=www.xxx.com,www.ccc.com
